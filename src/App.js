@@ -1,18 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Components/Home'; // Adjust the path if needed
+import LoginPage from './core/LoginPage';
+import SignUpPage from './core/SignUpPage';
+import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import './App.css';
+
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* Example Navbar */}
-        {<Navbar /> }
-        
+        <Navbar />
         <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/get-started" element={<SignUpPage />} />
           <Route path="/" element={<Home />} />
-          {/* Add more routes here as needed */}
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </Router>
