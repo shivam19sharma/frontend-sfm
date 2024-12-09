@@ -48,11 +48,12 @@ const LoginPage = () => {
         body: JSON.stringify(formData)
       });
       
-      if (!response.ok) throw new Error('Invalid credentials');
+      if (!response.ok) throw new Error('Login failed');
       
       const data = await response.json();
+      console.log(data);
     } catch (err) {
-      setError(err.message);
+      console.error(err.message);
     }
   };
 
