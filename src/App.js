@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
- import Navbar from './Components/Home/Navbar';
+import Navbar from './Components/Home/Navbar';
 import Contact from './Components/Home/Contact';
 import Service from './Components/Home/Service';
- import About from './Components/Home/About';
+import About from './Components/Home/About';
+import LoginPage from './core/LoginPage';
+import SignUpPage from './core/SignUpPage';
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
         <Route path="/about" element={<About />} /> 
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
       </Routes>
     </Router>
   );
