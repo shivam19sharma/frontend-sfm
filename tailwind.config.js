@@ -9,9 +9,7 @@
   
   
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/Components/Home/Home.jsx", "./src/Components/Home/About.jsx","./src/Components/Home/Contract.jsx"], // Fixed syntax
   theme: {
     extend: {},
   },
