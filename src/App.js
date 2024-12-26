@@ -18,30 +18,36 @@ import Roles from './Components/esg_dashboard/Roles';
 import PermissionTable from './Components/esg_dashboard/PermissionTable';
 import FileUpload from './Components/esg_dashboard/FileUpload';
 import ProjectBoundary from './Components/esg_dashboard/ProjectBoundary';
+import Sidebar from './Components/esg_dashboard/Sidebar';
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/companies" element={<Companies />} />
-        <Route path="/AddEditCompany" element={<AddEditCompany />} />
-        <Route path="/AddEditESGMetric" element={<AddEditESGMetric />} />
-        <Route path="/CompanyDetails/:companyID" element={<CompanyDetails />} />
-        <Route path="/CompanyEsgData" element={<CompanyEsgData />} />
-        <Route path="/metrics" element={<Metrics />} />
-        <Route path="/roles" element={<Roles />} />
-        <Route path="/Permissiontable" element={<PermissionTable />} />
-        <Route path="/FileUpload" element={<FileUpload />} />
-        <Route path="/ProjectBoundary" element={<ProjectBoundary />} />
-      </Routes>
+      <div className="flex">
+        <Sidebar />
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/companies" element={<Companies />} />
+            <Route path="/AddEditCompany" element={<AddEditCompany />} />
+            <Route path="/AddEditESGMetric" element={<AddEditESGMetric />} />
+            <Route path="/CompanyDetails/:companyID" element={<CompanyDetails />} />
+            <Route path="/CompanyEsgData" element={<CompanyEsgData />} />
+            <Route path="/metrics" element={<Metrics />} />
+            <Route path="/roles" element={<Roles />} />
+            <Route path="/Permissiontable" element={<PermissionTable />} />
+            <Route path="/FileUpload" element={<FileUpload />} />
+            <Route path="/ProjectBoundary" element={<ProjectBoundary />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 };
