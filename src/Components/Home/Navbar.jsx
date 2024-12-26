@@ -20,11 +20,12 @@ const Navbar = () => {
         <Link to="/service" className="hover:text-gray-300">Service</Link>
         <Link to="/contact" className="hover:text-gray-300">Contact</Link>
         <Link to="/login" className="hover:text-gray-300">Login</Link>
-        <Link to="/signup">
+        {/* <Link to="/signup">
           <button className="bg-yellow-500 text-white py-2 px-6 rounded-full hover:bg-yellow-600 transition duration-300">
             Sign Up
           </button>
-        </Link>
+        </Link> */}
+        <Link to="/signup" className="hover:text-gray-300">Signup</Link>
       </div>
   
       {/* Mobile Menu Button */}
