@@ -12,12 +12,12 @@ const Navbar = () => {
     <nav className="bg-green-800 text-white shadow-lg fixed w-full top-0 z-20">
     <div className="container mx-auto flex justify-between items-center py-4 px-6">
       {/* Logo */}
-      <Link to="/" className="text-xl font-bold">SFM</Link>
+      <Link to="/" className="text-xl font-bold hover:text-yellow-300 transition duration-300">SFM</Link>
       
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6">
-        <Link to="/about" className="hover:text-gray-300">About</Link>
-        <Link to="/service" className="hover:text-gray-300">Service</Link>
+        <Link to="/about" className="hover:text-yellow-300 transition duration-300">About</Link>
+        <Link to="/service" className="hover:text-yellow-300 transition duration-300">Service</Link>
         <Link to="/contact" className="hover:text-gray-300">Contact</Link>
         <Link to="/login" className="hover:text-gray-300">Login</Link>
         {/* <Link to="/signup">
